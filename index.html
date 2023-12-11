@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="incon/coracao-_1_.ico" type="image/x-icon">
+    <title>Carolina</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&family=Rubik&family=Secular+One&display=swap');
+        </style>
+
+    <style>
+
+        body{
+           background-color: rgb(12, 5, 44)
+        }
+        @media screen and (max-width: 768px) {
+            ::selection, aside{
+                width: 100%;
+                flex-direction: column;
+                
+            }  
+        }
+
+        .painel{
+            margin: auto;
+            background-color: white;
+            border: 5px solid blueviolet;
+            width: 500px;
+            height: 500px;
+            border-radius: 30px;
+            text-align: center;
+            padding-top: 40px;
+            font-family: 'Pacifico', cursive;
+        }
+        #sim{
+            height: 40px;
+            width: 60px;
+            background-color: rgb(189, 97, 166);
+            border-radius: 10px;
+            border: solid 3px rgb(29, 16, 43);
+            color: white;
+            margin-left: -80px;
+        }
+        #nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: rgb(189, 97, 166);
+            border-radius: 10px;
+            border: solid 3px rgb(29, 16, 43);
+            color: white;
+            margin-left: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="painel">
+        <h1> Voce é o Amor da Minha Vida </h1>
+
+        <h2> Aceita ser a Dona do Meu Coração? </h2>
+
+        <button id="sim" onclick="parabens()" > Sim </button>
+        <button onmouseover="fuja()" id="nao"> Não </button>
+        <br>
+        <img src="https://www.angelsflypantufas.com.br/wp-content/uploads/2019/06/gif-stitch-fofooo.gif" alt="">
+
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var largurajanela = window.innerWidth;
+            var alturajanela = window.innerHeight;
+
+            var maxX = largurajanela - botaoNao.offsetWidth;
+            var maxY = alturajanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left =aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+
+        function parabens(){
+            alert("Parabéns Vc Fez a escolha Certa😍")
+        }
+    </script>
+
+
+</body>
+</html>
